@@ -1,0 +1,75 @@
+@import "../node_modules/antd/lib/style/themes/default";
+@import "../node_modules/antd/lib/style/mixins/index";
+
+@menu-prefix-cls: ~"@{ant-prefix}-menu";
+
+// blue menu theme
+.@{menu-prefix-cls} {
+  &-blue,
+  &-blue &-sub {
+    color: @text-color-secondary;
+    background: #f0f;
+  }
+
+  &-blue &-inline&-sub {
+    background: #333;
+  }
+
+  &-blue&-horizontal {
+    border-bottom-color: #f0f;
+  }
+
+  &-blue&-horizontal > &-item,
+  &-blue&-horizontal > &-submenu {
+    border-color: #f0f;
+    border-bottom: 0;
+    top: 0;
+  }
+
+  &-blue &-item,
+  &-blue &-item > a {
+    color: @text-color-secondary;
+  }
+
+  &-blue&-inline,
+  &-blue&-vertical {
+    border-right: 0;
+  }
+
+  &-blue&-inline &-item,
+  &-blue&-vertical &-item {
+    border-right: 0;
+    margin-left: 0;
+    left: 0;
+  }
+
+  &-blue &-item:hover,
+  &-blue &-item-active,
+  &-blue &-submenu-active,
+  &-blue &-submenu-selected,
+  &-blue &-submenu:hover,
+  &-blue &-submenu-title:hover {
+    background-color: transparent;
+    color: #fff;
+    > a {
+      color: #fff;
+    }
+  }
+
+  &-blue &-item-selected {
+    border-right: 0;
+    color: #fff;
+    > a,
+    > a:hover {
+      color: #fff;
+    }
+  }
+
+  &-blue&-vertical &-item-selected {
+    background-color: transparent;
+  }
+
+  &-blue&-inline &-item-selected {
+    background-color: @primary-color;
+  }
+}
